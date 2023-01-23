@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{ 
+            --very-light-pink : #C7C7C7;
+            --hospital-green : #ACD9B2;
+            --text-input-field: #F7F7F7;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px
+        }
+        body{
+            margin:0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .general-container{
+            display: grid;
+            grid-template-rows: auto, 1fr, auto;
+            width: 300px;
+        }
+        .logo{
+            width: 150px;
+            margin-bottom: 48px;
+            justify-self: center;
+            display:none;
+        }
+        .login-form{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            color: var(--black);
+            font-weight: bold;
+            font-size: var(--sm);
+            margin-bottom: 4px;
+        }
+        .input{
+            padding: 8px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            border: none;
+            height: 30px;
+            background-color: var(--text-input-field);
+        }
+        .primary-button{
+            height: 44px;
+            border-radius: 8px;
+        }
+        .login-button{
+            margin-top: 20px;
+            border: none;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .forgot-password{
+            margin-top: 20px;
+            font-size: var(--sm);
+            color: var(--hospital-green);
+            font-weight: bold;
+            text-decoration: none;
+            justify-self: center;
+        }
+        .sing-up-button{
+            margin-top: 36px;
+            border: 1px solid var(--hospital-green);
+            background-color: var(--white);
+            color:var(--hospital-green);
+            font-weight: bold;
+            font-size: var(--md);
+        }
+
+        @media (max-width : 640px){
+            .logo{
+                display: block;
+            }
+            .sing-up-button{
+                width: inherit;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="general-container">
+            <img src="../platzy-logos-icons/logos/logo_yard_sale.svg" alt="logo image" class="logo">
+            <form action=" " class="login-form">
+
+                <label for="email" class="label labe-email">Email address</label>
+                <input type="email" id="email" class="input input-email" placeholder="email@mail.com">
+
+                <label for="password" class="label label-password">Password</label>
+                <input type="password" id="password" class="input input-password" placeholder="***********">
+              
+                <input type="submit" value="Log in"class="primary-button login-button">
+            </form>
+            <a href="/" class="forgot-password">Forgot my password</a>
+            <button class="primary-button sing-up-button">Sing up</button>
+        </div>
+    </div>
+</body>
+</html>

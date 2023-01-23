@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --very-light-pink: #C7C7C7;
+            --hospital-green: #ACD9B2;
+            --text-input-field: #F7F7F7;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px
+        }
+
+        body {
+            margin: 0 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .navbar {
+            width: auto;
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--very-light-pink);
+            padding: 0 24px;
+        }
+
+        .navbar-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .container1,
+        .container2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .image {
+            width: 164px;
+        }
+
+        .lista {
+            margin-left: 30px;
+            display: flex;
+        }
+
+        .lista ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+        }
+
+        .lista ul li {
+            padding: 4px;
+            margin: 4px;
+        }
+
+        .lista ul li :hover {
+            border: solid 1px var(--hospital-green);
+            border-radius: 8px;
+            padding: 4px;
+            margin: 4px;
+            color: var(--hospital-green);
+        }
+
+        .lista a,
+        .container2 p {
+            margin: 0;
+            text-decoration: none;
+            color: var(--very-light-pink)
+        }
+
+        .incon-row {
+            margin: 0 10px 0 10px;
+            transform: rotate(90deg);
+        }
+
+        .logo {
+            margin-bottom: -8px;
+            margin-left: 16px;
+        }
+
+        .container2 span:nth-child(4) {
+            background-color: var(--hospital-green);
+            font-weight: bold;
+            width: 12px;
+            height: 12px;
+            font-size: 8px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 18px;
+            right: 20px;
+        }
+
+        @media(max-width: 880px) {
+            .image {
+                width: 140px;
+            }
+
+            .lista ul li {
+                padding: 2px;
+                margin: 2px;
+            }
+
+            .container2 p {
+                display: none;
+            }
+
+            .lista ul li :hover {
+                border: solid 1px var(--hospital-green);
+                border-radius: 4px;
+                padding: 2px;
+                margin: 2px;
+                color: var(--hospital-green);
+            }
+
+            .lista a {
+                margin: 0;
+                text-decoration: none;
+                color: var(--very-light-pink);
+                font-size: var(--sm);
+            }
+        }
+
+        @media(max-width: 640px) {
+
+            .menu {
+                display: block;
+                align-self: center;
+            }
+
+            .lista,
+            .container2 p,
+            .incon-row {
+                display: none;
+            }
+
+            .image {
+                width: 120px;
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="menu">
+                <img src="../platzy-logos-icons/icons/icon_menu.svg" alt="">
+            </div>
+            <div class="container1">
+                <img src="../platzy-logos-icons/logos/logo_yard_sale.svg" alt="Logo" class="image">
+                <div class="lista">
+                    <ul>
+                        <li>
+                            <a href="#">All</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Clothes</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Electronics</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Furnitures</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Toys</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Others</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container2">
+                <p>email@email.com</p>
+                <span class="incon-row">
+                    <img src="../platzy-logos-icons/icons/flechita.svg" alt="">
+                </span>
+                <div class="logo">
+                    <img src="../platzy-logos-icons/icons/icon_shopping_cart.svg" alt="">
+                </div>
+                <span class="number-items">2</span>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

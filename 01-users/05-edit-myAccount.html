@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root{ 
+            --very-light-pink : #C7C7C7;
+            --hospital-green : #ACD9B2;
+            --text-input-field: #F7F7F7;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px
+        }
+        body{
+            margin: 0;
+            font-family:'Quicksand', sans-serif;
+        }
+        .general-container{
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .sub-container{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+        .title{
+            font-size: var(--lg);
+            margin: 12px 0 36px 0;
+        }
+        .form-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            width: 8px;
+        }
+        .parrafo{
+            margin: 12px 0 32px 0;
+            color: var(--very-light-pink);
+        }
+        .edit-button{
+            border-radius: 8px;
+            border: solid 1px var(--hospital-green);
+            color: var(--hospital-green);
+            font-size: var(--lg);
+            height: 44px;
+            background-color: var(--white);
+            margin: 32px 0 18px 0;
+        }
+
+        @media (max-width : 640px){
+            .sub-container{
+                height: 100%;
+            }
+            .form-container{
+                height: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="general-container">
+        <div class="sub-container">
+            <h1 class="title">My account</h1>
+            <form action="/" class="form-container">
+                <div class="divisor-container">
+                    <label for="name" class="label label-name">Name</label>
+                    <p class="parrafo parrafo-name" id="name">Mauricio Vélez</p>
+
+                    <label for="email" class="label label-email">Email</label>
+                    <p class="parrafo parrafo-email" id="email">email@mail.com</p>
+
+                    <label for="password" class="label label-password">Password</label>
+                    <p class="parrafo parrafo-password" id="password">*********</p>
+                </div>
+                <button class="edit-button">Edit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
